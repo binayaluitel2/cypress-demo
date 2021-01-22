@@ -1,0 +1,93 @@
+[
+  {
+    "description": "              I want to navigate to DivvyCloud Homepage to do some exploratory testing.",
+    "keyword": "Feature",
+    "name": "DivvyCloud Homepage",
+    "line": 1,
+    "id": "divvycloud-homepage",
+    "tags": [],
+    "uri": "divvycloud_homepage.feature",
+    "elements": [
+      {
+        "id": "divvycloud-homepage;navigate-to-divvycloud-homepage",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Navigate to DivvyCloud HomePage",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I go to DivvyCloud page",
+            "result": {
+              "status": "passed",
+              "duration": 2471000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see page title as \"DivvyCloud - Protecting Cloud & Container Environments\"",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "divvycloud-homepage;verify-site-banner-is-present",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify site banner is present",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I go to DivvyCloud page",
+            "result": {
+              "status": "passed",
+              "duration": 1398000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see page title as \"DivvyCloud - Protecting Cloud & Container Environments\"",
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I should see site banner",
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Banner text should contain \"Which cloud security solution is right for you\"",
+            "result": {
+              "status": "passed",
+              "duration": 3215000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
