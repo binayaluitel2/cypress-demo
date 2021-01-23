@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 import { And, Given, Then } from "cypress-cucumber-preprocessor/steps";
 
 Cypress.on("uncaught:exception", (err, runnable) => {
@@ -6,19 +8,23 @@ Cypress.on("uncaught:exception", (err, runnable) => {
   return false;
 });
 
-const divvyurl = "https://divvycloud.com/";
 
 Given(`I go to DivvyCloud page`, () => {
-  cy.visit(divvyurl);
+  const url = Cypress.env('divvyURL');
+  cy.visit(url);
+  cy.log(
+    "Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud."
+  );
+
 });
 
 Then(`I should see page title as {string}`, (title) => {
   cy.title().should("eq", title);
 });
 
-Then(`insightIDR should be displayed`, () => {
-  cy.contains("insightIDR");
-});
+// Then(`insightIDR should be displayed`, () => {
+//   cy.contains("insightIDR");
+// });
 
 //Assert Site banner is present
 Then(`I should see site banner`, () => {
@@ -59,7 +65,6 @@ And(
     support.exist;
     pricing.exist;
     request_a_demo.exist;
-    
   }
 );
 

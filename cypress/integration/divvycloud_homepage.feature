@@ -25,3 +25,9 @@ Feature: DivvyCloud Homepage
             Given I go to DivvyCloud page
              Then I should see page title as "DivvyCloud - Protecting Cloud & Container Environments"
               And I should see "divvy_logo","why_divvy","platform", "solutions","customers","resources" and "company"
+
+        Scenario: Interactive Key Capabilities
+            Given I go to DivvyCloud page
+             Then I should see page title as "DivvyCloud - Protecting Cloud & Container Environments"
+              And I should see key capabilities circle
+              Then I should see 
