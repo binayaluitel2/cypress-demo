@@ -8,14 +8,12 @@ Cypress.on("uncaught:exception", (err, runnable) => {
   return false;
 });
 
-
 Given(`I go to DivvyCloud page`, () => {
-  const url = Cypress.env('divvyURL');
+  const url = Cypress.env("divvyURL");
   cy.visit(url);
   cy.log(
     "Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud.Navigated to Dibbycloud."
   );
-
 });
 
 Then(`I should see page title as {string}`, (title) => {
@@ -94,5 +92,38 @@ And(
     customers.exist;
     resources.exist;
     company.exist;
+  }
+);
+
+And(
+  `I should see {string}, {string}, {string}, {string}, {string}, {string}, {string} and {string}`,
+  (
+    iam_governance,
+    infra_as_code_security,
+    threat_protection,
+    posture_management,
+    risk_assess_audit,
+    unified_visibility_monitoring,
+    extensible_platform,
+    automation_rt_remediation
+  ) => {
+
+    var  iam_governance = cy.get('[data-id="12886"]');
+    var  infra_as_code_security = cy.get('[data-id="650"] > .icon');
+    var  threat_protection = cy.get('[data-id="12884"] > .icon');
+    var  posture_management = cy.get('[data-id="623"] > .icon');
+    var  risk_assess_audit = cy.get('[data-id="12888"] > .icon');
+    var  unified_visibility_monitoring = cy.get('[data-id="609"] > .icon');
+    var  extensible_platform = cy.get('[data-id="14131"] > .icon');
+    var  automation_rt_remediation = cy.get('[data-id="612"] > .icon');
+
+    iam_governance.exist;
+    infra_as_code_security.exist;
+    threat_protection.exist;
+    posture_management.exist;
+    risk_assess_audit.exist;
+    unified_visibility_monitoring.exist;
+    extensible_platform.exist;
+    automation_rt_remediation.exist;
   }
 );

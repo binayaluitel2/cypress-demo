@@ -29,5 +29,4 @@ Feature: DivvyCloud Homepage
         Scenario: Interactive Key Capabilities
             Given I go to DivvyCloud page
              Then I should see page title as "DivvyCloud - Protecting Cloud & Container Environments"
-              And I should see key capabilities circle
-              Then I should see 
+              And I should see "iam_governance", "infra_as_code_security", "threat_protection", "posture_management", "risk_assess_audit", "unified_visibility_monitoring", "extensible_platform" and "automation_rt_remediation"

@@ -1,19 +1,28 @@
+const { exec } = require("child_process");
+// exec(`cucumber-json-merge --out merged.json cypress/cucumber-json/rapid7_homepage.cucumber.json cypress/cucumber-json/divvycloud_homepage.cucumber.json`)
+function createcucumberreports(featurename) {
 var reporter = require('cucumber-html-reporter');
+
+var feature = featurename;
 
 var options = {
         theme: 'bootstrap',
-        jsonFile: 'cypress/cucumber-json/cucumber_report.json',
-        output: 'cypress/cucumber-json/cucumber_report.html',
+        jsonFile: `${feature}.json`,
+        output: `${feature}.html`,
         reportSuiteAsScenarios: true,
         scenarioTimestamp: true,
         launchReport: true,
         metadata: {
             "App Version":"0.3.2",
             "Test Environment": "STAGING",
-            "Browser": "Chrome  54.0.2840.98",
+            "Browser": "Chrome  Version 87.0.4280.141",
             "Platform": "MacOS",
             "Parallel": "Scenarios",
             "Executed": "Remote"
         }
     };
 reporter.generate(options);
+}
+
+createcucumberreports("cucumber-report");
+// createcucumberreports("divvycloud_homepage");
