@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 // exec(`cucumber-json-merge --out merged.json cypress/cucumber-json/rapid7_homepage.cucumber.json cypress/cucumber-json/divvycloud_homepage.cucumber.json`)
-function createcucumberreports(featurename) {
+function createcucumberReports(featurename) {
 var reporter = require('cucumber-html-reporter');
 
 var feature = featurename;
@@ -14,7 +14,7 @@ var options = {
         launchReport: true,
         metadata: {
             "App Version":"0.3.2",
-            "Test Environment": "STAGING",
+            "Test Environment": "LOCAL",
             "Browser": "Chrome  Version 87.0.4280.141",
             "Platform": "MacOS",
             "Parallel": "Scenarios",
@@ -24,5 +24,4 @@ var options = {
 reporter.generate(options);
 }
 
-createcucumberreports("cucumber-report");
-// createcucumberreports("divvycloud_homepage");
+createcucumberReports("cucumber-report");
