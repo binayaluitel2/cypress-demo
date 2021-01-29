@@ -30,7 +30,7 @@
   * 1) Clone the Repository
   * 2) cd inside cypress-demo folder
   * 3) Run command `npm test`
-  * 4) To run test using selected tags(e.g @test) `npx cypress-tags run -e TAGS='@test'
+  * 4) To run test using selected tags(e.g @test) `npx cypress-tags run -e TAGS='@test'`
   
   ### To run inside Docker Container: 
   *Prerequisite: Docker is installed* 
