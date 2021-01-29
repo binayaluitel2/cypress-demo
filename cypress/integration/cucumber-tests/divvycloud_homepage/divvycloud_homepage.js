@@ -2,15 +2,16 @@
 
 import { And, Given, Then } from "cypress-cucumber-preprocessor/steps";
 
-Cypress.on("uncaught:exception", (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false;
-});
+// Cypress.on("uncaught:exception", (err, runnable) => {
+//   // returning false here prevents Cypress from
+//   // failing the test
+//   return false;
+// });
 
 And(
   `I should see {string},{string},{string} and {string}`,
   (docs, support, pricing, request_a_demo) => {
+    cy.screenshot();
     var docs = cy.get("#menu-item-173 > a");
     var support = cy.get("#menu-item-174");
     var pricing = cy.get("#menu-item-16434 > a");

@@ -7,11 +7,16 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 });
 
 Given(`I go to Rapid7 page`, () => {
+  //screenshot tryout
   const url = Cypress.env('rapid7URL');
-  cy.visit(url);});
+  cy.visit(url);
+});
+  
+
 
 Then(`I should see page title as {string}`, (title) => {
   cy.title().should("eq", title);
+
 });
 
 And(`I click Products`, () => {

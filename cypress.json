@@ -14,5 +14,9 @@
       "html": false,
       "json": true
     }
-  }
+  },
+    "pageLoadTimeout": 100000,
+    "video": false,
+    "chromeWebSecurity": false
+    
 }

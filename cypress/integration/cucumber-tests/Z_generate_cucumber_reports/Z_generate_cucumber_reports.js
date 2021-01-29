@@ -19,6 +19,8 @@ Given(`I generate report for all the features`, () => {
     // cy.wait(10000);
     cy.exec(`cucumber-json-merge --out cucumber-report.json ${finalstring}`);
 
+    //    cy.exec(`cucumber-json-merge --out cucumber-report.json divvycloud_guide.cucumber.json divvycloud_homepage.cucumber.json rapid7_homepage.cucumber.json divvycloud_chat_widget.cucumber.json `);
+
     cy.exec("node cucumber_json_to_html.js");
   });
 });

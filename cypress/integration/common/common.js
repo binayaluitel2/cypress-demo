@@ -34,4 +34,6 @@ Then(`Banner text should contain {string}`, (bannerText) => {
 
   cy.get("#menu-main-menu").click();
   cy.get(".banner-content > p").contains(bannerText);
+    // cy.go("back");
+
 });

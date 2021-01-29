@@ -4,7 +4,7 @@
   "description": "POC",
   "main": "index.js",
   "scripts": {
-    "test": "npm run scripts-chrome-headless || npm run posttest",
+    "test": "npm run scripts-chrome|| npm run posttest",
     "test:all": "cypress run --spec \"**/*.features\"",
     "clean:reports": "rm -R -f cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
     "pretest": "npm run clean:reports",
