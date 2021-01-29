@@ -12,6 +12,7 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Upcoming](#upcoming)
   * [License](#license)
   
   ## Installation
@@ -29,6 +30,8 @@
   * 1) Clone the Repository
   * 2) cd inside cypress-demo folder
   * 3) Run command `npm test`
+  * 4) To run test using selected tags(e.g @test) `npx cypress-tags run -e TAGS='@test'
+  
   ### To run inside Docker Container: 
   *Prerequisite: Docker is installed* 
   * 1) Pull the cypress base image using command `docker pull cypress/base`
@@ -39,6 +42,9 @@
   * 6) Install chromium using `apt-get install chromium`
   * 7) Run the test cases using command `npx cypress run --browser chromium --headless`
   
+   ## Upcoming
+  
+  *Parallel run of the tests*
   
   ## License
   
