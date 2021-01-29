@@ -12,26 +12,33 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Tests](#tests)
   * [License](#license)
   
   ## Installation
   
   *Steps required to install project and how to get the development environment running:*
-  
-  npm install
+  * 1) Clone the Repository
+  * 2) cd inside cypress-demo folder
+  * 3) Install all the dependencies using `npm install`
   
   ## Usage 
   
   *Instructions and examples for use:*
   
-  npm test
+  ### To run locally: 
+  * 1) Clone the Repository
+  * 2) cd inside cypress-demo folder
+  * 3) Run command `npm test`
+  ### To run inside Docker Container: 
+  *Prerequisite: Docker is installed* 
+  * 1) Pull the cypress base image using command `docker pull cypress/base`
+  * 2) creates container e.g `mycontainer` out of the image using command `docker run --name mycontainer -dit cypress/base:latest`
+  * 3) log into container `mycontainer`using command `docker container exec -it mycontainer /bin/bash`
+  * 4) Clone the repository inside container `git clone https://github.com/binayaluitel2/cypress-demo.git`
+  * 5) Go inside cypress-demo directory `cd cypress-demo`
+  * 6) Install chromium using `apt-get install chromium`
+  * 7) Run the test cases using command `npx cypress run --browser chromium --headless`
   
-  ## Tests
-  
-  *Tests for application and how to run them:*
-  
-  TBD
   
   ## License
   
